@@ -8,12 +8,13 @@ import { events } from './response/events.json' assert { type: 'json' };
 
 export const handlers: HttpHandler[] = [
   http.get('/api/events', () => {
-    return HttpResponse.json(events);
+    return HttpResponse.json({ events });
   }),
 
   http.post('/api/events', async ({ request }) => {
     let newEvent = (await request.json()) as Event;
     newEvent = { ...newEvent, id: String(events.length + 1) };
+
     return HttpResponse.json(newEvent, { status: 201 });
   }),
 
