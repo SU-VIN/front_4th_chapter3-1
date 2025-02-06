@@ -1,14 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { render, screen, within } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-
 import {
   setupMockHandlerCreation,
   setupMockHandlerDeletion,
   setupMockHandlerUpdating,
 } from '../__mocks__/handlersUtils';
 import App from '../App';
-
 import { Event, EventForm } from '../types';
 
 const renderApp = () => {
@@ -449,7 +447,6 @@ it('notificationTime을 10으로 하면 지정 시간 10분 전 알람 텍스트
   setupMockHandlerCreation([...events]);
 
   renderApp();
-  const user = userEvent.setup();
 
   expect(await screen.findByText(/10분 후/i)).toBeInTheDocument();
 });

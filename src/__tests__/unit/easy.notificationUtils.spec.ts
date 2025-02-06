@@ -122,6 +122,6 @@ describe('createNotificationMessage', () => {
       notificationTime: 60,
     };
 
-    expect(createNotificationMessage(event)).toEqual('60분 후 event1 일정이 시작됩니다.');
+    expect(createNotificationMessage(event)).toBe('60분 후 event1 일정이 시작됩니다.');
   });
 });
