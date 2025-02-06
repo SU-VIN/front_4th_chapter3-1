@@ -38,15 +38,14 @@ import {
 } from '@chakra-ui/react';
 import { useRef, useState } from 'react';
 
+import { weekDays, notificationOptions } from './constants/datas.ts';
+import AddEventForm from './components/AddEventForm.tsx';
 import { useCalendarView } from './hooks/useCalendarView.ts';
 import { useEventStore } from './hooks/useEventForm.ts';
 import { useEventOperations } from './hooks/useEventOperations.ts';
 import { useNotifications } from './hooks/useNotifications.ts';
 import { useSearch } from './hooks/useSearch.ts';
 import { Event, EventForm } from './types';
-import AddEventForm from './components/AddEventForm.tsx';
-import { weekDays, notificationOptions } from './constants/datas.ts';
-
 import {
   formatDate,
   formatMonth,
