@@ -38,9 +38,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, '이벤트 2', new Date('2024-07-01'), 'week')
-    ).toEqual([
+    expect(getFilteredEvents(events, '이벤트 2', new Date('2024-07-01'), 'week')).toEqual([
       {
         date: '2024-07-01',
         title: '이벤트 2',
@@ -96,9 +94,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, '', new Date('2024-07-01'), 'week')
-    ).toEqual([
+    expect(getFilteredEvents(events, '', new Date('2024-07-01'), 'week')).toEqual([
       {
         date: '2024-07-01',
         title: '이벤트 1',
@@ -170,9 +166,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, '', new Date('2024-07-01'), 'month')
-    ).toEqual([
+    expect(getFilteredEvents(events, '', new Date('2024-07-01'), 'month')).toEqual([
       {
         date: '2024-07-01',
         title: '이벤트 1',
@@ -260,9 +254,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, '이벤트', new Date('2024-07-01'), 'week')
-    ).toEqual([
+    expect(getFilteredEvents(events, '이벤트', new Date('2024-07-01'), 'week')).toEqual([
       {
         date: '2024-07-01',
         title: '이벤트 1',
@@ -334,9 +326,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, '', new Date('2024-07-01'), 'week')
-    ).toEqual(events);
+    expect(getFilteredEvents(events, '', new Date('2024-07-01'), 'week')).toEqual(events);
   });
 
   it('검색어가 대소문자를 구분하지 않고 작동한다', () => {
@@ -391,9 +381,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, 'event', new Date('2024-07-01'), 'week')
-    ).toEqual(events);
+    expect(getFilteredEvents(events, 'event', new Date('2024-07-01'), 'week')).toEqual(events);
   });
 
   it('월의 경계에 있는 이벤트를 올바르게 필터링한다', () => {
@@ -432,9 +420,7 @@ describe('getFilteredEvents', () => {
       },
     ];
 
-    expect(
-      getFilteredEvents(events, '', new Date('2024-08-31'), 'week')
-    ).toEqual([
+    expect(getFilteredEvents(events, '', new Date('2024-08-31'), 'week')).toEqual([
       {
         date: '2024-08-31',
         title: '이벤트 1',
@@ -455,8 +441,6 @@ describe('getFilteredEvents', () => {
   });
 
   it('빈 이벤트 리스트에 대해 빈 배열을 반환한다', () => {
-    expect(getFilteredEvents([], '', new Date('2024-07-01'), 'week')).toEqual(
-      []
-    );
+    expect(getFilteredEvents([], '', new Date('2024-07-01'), 'week')).toEqual([]);
   });
 });

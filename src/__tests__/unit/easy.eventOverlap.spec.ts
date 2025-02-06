@@ -8,21 +8,15 @@ import {
 
 describe('parseDateTime', () => {
   it('2024-07-01 14:30을 정확한 Date 객체로 변환한다', () => {
-    expect(parseDateTime('2024-07-01', '14:30')).toEqual(
-      new Date('2024-07-01T14:30')
-    );
+    expect(parseDateTime('2024-07-01', '14:30')).toEqual(new Date('2024-07-01T14:30'));
   });
 
   it('잘못된 날짜 형식에 대해 Invalid Date를 반환한다', () => {
-    expect(parseDateTime('2024-017-021', '14:30')).toEqual(
-      new Date('Invalid Date')
-    );
+    expect(parseDateTime('2024-017-021', '14:30')).toEqual(new Date('Invalid Date'));
   });
 
   it('잘못된 시간 형식에 대해 Invalid Date를 반환한다', () => {
-    expect(parseDateTime('2024-07-01', '14:3')).toEqual(
-      new Date('Invalid Date')
-    );
+    expect(parseDateTime('2024-07-01', '14:3')).toEqual(new Date('Invalid Date'));
   });
 
   it('날짜 문자열이 비어있을 때 Invalid Date를 반환한다', () => {
@@ -252,10 +246,7 @@ describe('findOverlappingEvents', () => {
       },
     ];
 
-    expect(findOverlappingEvents(event, events)).toEqual([
-      events[1],
-      events[2],
-    ]);
+    expect(findOverlappingEvents(event, events)).toEqual([events[1], events[2]]);
   });
 
   it('겹치는 이벤트가 없으면 빈 배열을 반환한다', () => {
