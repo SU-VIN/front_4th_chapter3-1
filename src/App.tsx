@@ -44,6 +44,9 @@ import { useEventOperations } from './hooks/useEventOperations.ts';
 import { useNotifications } from './hooks/useNotifications.ts';
 import { useSearch } from './hooks/useSearch.ts';
 import { Event, EventForm } from './types';
+import AddEventForm from './components/AddEventForm.tsx';
+import { weekDays, notificationOptions } from './constants/datas.ts';
+
 import {
   formatDate,
   formatMonth,
@@ -53,8 +56,6 @@ import {
   getWeeksAtMonth,
 } from './utils/dateUtils';
 import { findOverlappingEvents } from './utils/eventOverlap';
-import { weekDays, notificationOptions } from './constants/datas.ts';
-import AddEventForm from './components/AddEventForm.tsx';
 
 function App() {
   const {
