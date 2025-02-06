@@ -10,10 +10,11 @@ import {
   Tooltip,
   VStack,
 } from '@chakra-ui/react';
-import { RepeatType } from './../types';
-import { getTimeErrorMessage } from './../utils/timeValidation';
+
 import { useEventStore } from './../hooks/useEventForm.ts';
+import { RepeatType } from './../types';
 import { categories, notificationOptions } from '../constants/datas.ts';
+import { getTimeErrorMessage } from './../utils/timeValidation';
 
 interface AddEventFormProps {
   addOrUpdateEvent: () => void;

@@ -1,8 +1,7 @@
 import { create } from 'zustand';
+
 import { Event, RepeatType } from '../types';
 import { getTimeErrorMessage } from '../utils/timeValidation';
-
-type TimeErrorRecord = Record<'startTimeError' | 'endTimeError', string | null>;
 
 interface EventState {
   title: string;
@@ -21,7 +20,6 @@ interface EventState {
   startTimeError: string | null;
   endTimeError: string | null;
 
-  // Actions
   setTitle: (title: string) => void;
   setDate: (date: string) => void;
   setStartTime: (time: string) => void;
